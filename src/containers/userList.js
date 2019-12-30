@@ -1,19 +1,26 @@
 import React , {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {userSelected} from '../actions';
+import {userSelected , fetchUserList} from '../actions';
 
 class UserList extends Component {
-
+    componentDidMount () {
+        this.props.fetchUserList();
+    }
     render() {
         const renderList = ( {userList ,userSelected}) => {
+            const style = {
+                cursor: 'grabbing'
+            }
+
             return userList.map((user) => {
                 return (
                     <li
                         key={user.id}
+                        style={style}
                         onClick={() => userSelected(user)}
                     >
-                        {user.first} {user.last}
+                        {user.name}
                     </li>
                 );
             });
@@ -34,7 +41,7 @@ const mapStateToProps = (state) => {
 };
 
 const matchDispatchToProps = (dispatch) => {
-    return bindActionCreators({userSelected} , dispatch);
+    return bindActionCreators({userSelected , fetchUserList} , dispatch);
 };
 
 export default connect(mapStateToProps , matchDispatchToProps)(UserList);

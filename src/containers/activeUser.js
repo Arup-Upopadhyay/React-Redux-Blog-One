@@ -13,7 +13,7 @@ const ActiveUser = (props) => {
     else{
         return(
             <div style={style}>
-                you clicked on {props.activeUser.first} {props.activeUser.last}
+                you clicked on {props.activeUser.name}
             </div>
         )
     }
