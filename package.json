@@ -23,23 +23,28 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": ["react-app" , "prettier"],
-    "plugins": ["prettier"],
+    "extends": [
+      "react-app",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
     "rules": {
-        "prettier/prettier": {
-            "printWidth":80,
-            "tabWidth":4,
-            "useTabs":false,
-            "semi":true,
-            "singleQuote":true,
-            "trailingComma":"none",
-            "bracketSpacing":true,
-            "jsxBracketSameLine":true,
-            "arrowParens":"always",
-            "requirePragma":false,
-            "insertPragma":false,
-            "proseWrap":"never"            
-        }
+      "prettier/prettier": {
+        "printWidth": 80,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": true,
+        "arrowParens": "always",
+        "requirePragma": false,
+        "insertPragma": false,
+        "proseWrap": "never"
+      }
     }
   },
   "browserslist": {
@@ -57,6 +62,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "link-module-alias": "^1.2.0",
     "prettier": "^1.19.1"
   }
 }

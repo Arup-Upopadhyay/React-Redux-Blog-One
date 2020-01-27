@@ -21,7 +21,7 @@ const _userList = async () => {
     const response = await fetch(URL);
 
     const userList = await response.json();
-
+    
     return {
         type: USER_LIST,
         payload: userList
