@@ -7,4 +7,6 @@ const allReducers = combineReducers({
     userList
 });
 
+console.log('allReducers: ',allReducers);
+
 export default allReducers;
